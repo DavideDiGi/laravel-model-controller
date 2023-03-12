@@ -13,17 +13,20 @@
 
         <main>
             <div class="container">
-                <div class="row">
-                    <div class="col text-center">
-
-                        <div class="card">
-                            <div class="card-body">
-                                <h1 class="card-title">Laravel 9 + Bootstrap Template</h1>
-                                <p>ciao</p>
+                <div class="row">   
+                    @foreach ($movies as $movie)
+                        
+                        <div class="col text-center">
+                            
+                            <div class="card">
+                                <div class="card-body">
+                                    <h1 class="card-title">{{ $movie->title }}</h1>
+                                </div>
                             </div>
+                            
                         </div>
 
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </main>

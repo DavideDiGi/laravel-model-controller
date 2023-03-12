@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\Guest\PageController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,11 +15,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-
-// 7 - All'interno della funzione index() del controller, 
-// recuperate tutti i film dal database e passateli alla view, 
-// che quindi li visualizzerà a schermo, tramite delle card.
+Route::get('/', [PageController::class, 'index']);
